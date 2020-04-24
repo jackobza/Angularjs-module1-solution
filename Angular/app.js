@@ -1,42 +1,30 @@
 (function () {
 'use strict';
 
-angular.module('NameCalculator',[])
+angular.module('LunchCheck',[])
 
-.controller('NameCalculatorConntroller',function($scope){
-  $scope.name = "";
-  $scope.totalvalue = 0;
+.controller('LunchCheckContoller',LunchCheckContoller);
 
-  $scope.displayNumeric= function () {
-    var totalNameValue = calculating($scope.name);
-    $scope.totalvalue = totalNameValue;
-    var x = everyLetter($scope.name);
-  };
-  function calculating(string) {
-    var sum = 0;
-    for (var i = 0; i < string.length; i++) {
-      sum += string.charCodeAt(i);
-    }
-    return sum;
-  };
-  function everyLetter(string) {
+LunchCheckContoller.$inject = ['$scope'];
+
+function LunchCheckContoller($scope) {
+  $scope.Items = '';
+  $scope.CheckLunch = function () {
     // body...
-    var counter = 0;
-    var count = [] ;
-    for (var i = 0; i < string.length; i++) {
-      var sum = 0;
-      var ch = [];
-      for (var i = 0; i < ch.length; i++) {
-         if (string.charCodeAt(i)=ch[i]) {
-          counter++;
+    var numOfItems = $scope.Items
+    .split(',')
+    .filter(x => x.trim() != '')
+    .length;
 
-         }
-      }
-
-      
+    if (numOfItems == 0) {
+      $scope.message = "Enter some data please";
+    } else if (numOfItems <= 3) {
+      $scope.message = "Its not too much.Enjoy your lunch!!"
+    } else{
+      $scope.message = "It's too much dude!!"
     }
-  }
-});
-
+  };
+  // body...
+};
 
 })();
