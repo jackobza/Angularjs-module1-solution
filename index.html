@@ -4,6 +4,7 @@
     <title>Lunch Checker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <script src="Angular/angular.min.js"></script>
     <script src="Angular/app.js"></script>
     <style>
@@ -25,11 +26,13 @@
              <button class="btn btn-default"
              ng-click = "CheckLunch();">Check If Too Much</button>
          </div>
-         <div class="form-group message">
+         <div class="form-group message" id="message">
            <!-- Your message can go here. -->
            {{message}}
          </div>
    </div>
-
+   <p id="copyRight">Angularjs module 1 solution for Coursera <br>
+   Made By Jackob Hailouny
+ </p>
 </body>
 </html>

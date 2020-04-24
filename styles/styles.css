@@ -1,0 +1,33 @@
+body{
+	text-align: center;
+	background-color: #7da5e8;
+}
+
+
+h1{
+	font-size: 42pt;
+	font-weight: bold;
+}
+
+
+#lunch-menu{
+	border: 2px solid black;
+	border-radius: 24px;
+	text-align: center;
+	padding: 20px;
+}
+
+
+#copyRight{
+	font-size: 18pt;
+	font-weight: 600;
+	margin-top: 28%;
+}
+
+
+#message{
+	background-color: white;
+	padding: 24px;
+	border-radius: 24px;
+
+}
